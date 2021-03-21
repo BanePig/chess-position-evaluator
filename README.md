@@ -17,6 +17,7 @@ A flattened array of:
 - 6 Bitboards representing the positions of each of player one's pieces. (It is always player ones turn, and the boards is always oriented from player ones POV.)
 - 6 Bitboards representing the positions of each of player two's pieces.
 - 2 Bitboards representing any repetitions that the players have made (Aka what move not to make to avoid a draw by repitition)
+- 1 Bitboard representing en-passantable squares.
 - A single number representing the ELO of player one. (Normalized)
 - A single number representing the ELO of player two (Normalized, like player one)
 - A single number representing how many minutes player one has. (Divided by 10, capped at 15)
