@@ -1,4 +1,4 @@
-# Chess Position Evaluator
+# Chess Position Evaluator (BetaOne)
 
 Hackathon project to evaluate a chess position using tensorflow, and a lot of data.
 
@@ -9,7 +9,7 @@ Hackathon project to evaluate a chess position using tensorflow, and a lot of da
 - Install the requirements with pip install -r requirements.txt (From inside repository directory)
 - Create a dataset using data.py. For example: `py data.py -i ./pgns -o ./db.h5`, where pgns is a folder of pgn files (or one massive pgn file, concatenated together with a seperating blank line), and db.h5 is the name of the dataset file.
 - Train with train.py: `py train.py -train_data ./db.h5 -w weights.h5 -o weights.h5 -epochs 10 --ignore_no_weights`, where -w provides the initial weights file, -o provides the output weights, and -epochs tells how long to train for (how many interations of the dataset). --ignore_no_weights means that -w will be ignored if the file does not exist.
-- Evaluate the model: `py eval.py ./test.pgn -w ./weights.h5`, where test.pgn is a pgn file for game to be evaluated, and weights.h5 is a file of model weights.
+- Evaluate the model: `py eval.py ./test.pgn -w ./weights.h5`, where test.pgn is a pgn file for game to be evaluated, and weights.h5 is a file of model weights. The output is an array with probabilities of an outcome. The first is the probability that **whoever just moved** will **lose**.
 
 # Model Inputs:
 
