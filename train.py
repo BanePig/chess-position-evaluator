@@ -82,9 +82,9 @@ if __name__ == '__main__':
             game = game.next()
 
 
-    train_seq = DataSeq(cli_args.train_data[0], 64)
+    train_seq = DataSeq(cli_args.train_data[0], 1024)
     if cli_args.test_data is not None and len(cli_args.test_data) > 0:
-        test_seq = DataSeq(cli_args.test_data[0], 64)
+        test_seq = DataSeq(cli_args.test_data[0], 1024)
     else:
         test_seq = None
 
